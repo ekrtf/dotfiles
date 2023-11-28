@@ -1,4 +1,3 @@
-# alias
 alias prof="vi  ~/.bash_profile"
 alias reprof=". ~/.bash_profile"
 alias proj="cd /Users/emilekratiroff/projects"
@@ -16,13 +15,17 @@ alias gb="git branch"
 alias gcm="git commit -m"
 alias gca="git commit --amend"
 alias gco="git checkout"
+alias gpo="git rev-parse --abbrev-ref HEAD | xargs git push origin"
 alias gst="git stash"
 alias gsta="git stash apply"
 alias gh="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
 alias fox="open -a '/Applications/Firefox.app'"
 
-# starship
-eval "$(starship init bash)"
+alias news="open -a '/Applications/Google Chrome.app' 'https://lesechos.fr/' 'https://france24.com'   'https://news.ycombinator.com/' 'https://ft.com' 'https://techcrunch.com/' 'https://www.bbc.com/news' 'https://www.scmp.com/'"
 
-# rust
+eval "$(starship init bash)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
 . "$HOME/.cargo/env"
