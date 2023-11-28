@@ -1,0 +1,94 @@
+format = """\
+  $username\
+  $hostname\
+  $kubernetes\
+  $directory\
+  $git_branch\
+  $git_state\
+  $git_status\
+  $package\
+  $dotnet\
+  $golang\
+  $java\
+  $nodejs\
+  $python\
+  $ruby\
+  $rust\
+  $nix_shell\
+  $conda\
+  $memory_usage\
+  $aws\
+  $env_var\
+  $cmd_duration\
+  $line_break\
+  $jobs\
+  $time\
+  $character\
+  $battery\
+"""
+
+add_newline = true
+
+[username]
+format= ""
+
+[hostname]
+format= ""
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vicmd_symbol = "[❯](bold purple)"
+
+[cmd_duration]
+format = "[$duration]($style) "
+
+[battery]
+full_symbol = ""
+charging_symbol = ""
+discharging_symbol = ""
+
+[[battery.display]]
+threshold = 30
+style = "bold red"
+
+[git_status]
+ahead = "↑${count}"
+diverged = "↑${ahead_count}↓${behind_count}"
+behind = "↓${count}"
+
+[directory]
+style = "bold cyan"
+
+[jobs]
+symbol = "+"
+
+[nodejs]
+symbol = "N "
+
+[python]
+symbol = "P "
+
+[golang]
+symbol = "G "
+
+[rust]
+disabled = true
+
+[env_var]
+disabled = true
+
+[conda]
+disabled = true
+
+[dotnet]
+disabled = true
+
+[package]
+disabled = true
+
+[java]
+disabled = true
+
+[ruby]
+disabled = true
